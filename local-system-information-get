@@ -1,0 +1,15 @@
+<?php
+echo '<pre>';
+echo '(void): '.php_uname()."\n"; // output: "(void): Linux web989.uni5.net 4.4.180 #1 SMP Wed May 22 15:27:37 -03 2019 x86_64"
+echo 'a: '.php_uname('a')."\n"; // output: "a: Linux web989.uni5.net 4.4.180 #1 SMP Wed May 22 15:27:37 -03 2019 x86_64"
+echo 'm: '.php_uname('m')."\n"; // output: "m: x86_64"
+echo 'n: '.php_uname('n')."\n"; // output: "n: web989.uni5.net"
+echo 'r: '.php_uname('r')."\n"; // output: "r: 4.4.180"
+echo 's: '.php_uname('s')."\n"; // output: "s: Linux"
+echo 'v: '.php_uname('v')."\n"; // output: "v: #1 SMP Wed May 22 15:27:37 -03 2019"
+// echo file_get_contents('/etc/issue')."\n";
+
+echo '</pre>';
+phpinfo();
+
+?>
