@@ -1,0 +1,8 @@
+1. Get long lat between two location
+    https://maps.googleapis.com/maps/api/directions/json?origin=28.5215845,%2077.263643&destination=28.52161407470703,77.29303741455078&sensor=false&mode=two-wheeler&alternatives=true&key=AIzaSyB_G-gIHvseJvUe28r6DBGkuzJiRln-p1M
+    
+2. SQL Query to get distance between two location
+    $this->db->select('*, 111.1111*DEGREES(acos( cos( radians('.$clat.') ) * cos( radians( pp.location_lat ) ) * cos( radians( '.$clng.' ) - radians(pp.location_lng) ) + sin( radians('.$clat.') ) * sin( radians(pp.location_lat ) ) ) ) as from_distance')
+    
+3. Google API for address autocomplete
+   https://www.w3docs.com/learn-javascript/places-autocomplete.html
