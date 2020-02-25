@@ -1,0 +1,24 @@
+<?php 
+function makeSlug($str){
+	if(!empty($str)){
+		$str = preg_replace('~[^\pL\d]+~u', '-', $str);
+
+		$str = iconv('utf-8', 'us-ascii//TRANSLIT', $str);//comment
+
+		$str = preg_replace('~[^-\w]+~', '', $str);
+
+		$str = trim($str, '-');
+
+		$str = preg_replace('~-+~', '-', $str);
+
+		$str = strtolower($str);
+
+		if (empty($str)) {
+			return 'n-a';
+		}
+	}else{
+		$str='n-a';;
+	}
+	return $str;
+}
+?>
